@@ -1,0 +1,10 @@
+Führen Sie pro Session einmal "module load intel-compiler libFHBRS" aus.
+
+Ändern Sie nichts am Compiler oder den Compiler-Einstellungen!
+
+Übersetzen: make
+Ausführen mit grafischer Ausgabe: make run
+Ausführen ohne grafische Ausgabe: make run2
+
+Wichtig: vor Ausführen des Programms muss der Laufzeitstack einmalig vergrößert werden:
+ulimit -s 128000

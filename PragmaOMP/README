@@ -1,0 +1,21 @@
+Fuer individuelle Pakete jeweils in das Verzeichnis verzweigen. Dann:
+  Uebersetzen: make
+  Starten: make run (mit grafischer Ausgabe; nur auf wr0)
+      bzw. make run2 (fuer Nichtgrafikausgabe z.B. in einem Batch-Skript)
+
+
+Besonderheiten:
+
+- Für die Vektoraddition nutzen Sie den gcc Compiler, für alle anderen Aufgaben den Intel Compiler
+  
+mandelbrot:
+- Letzter Parameter beim Aufruf steuert grafische Ausgabe (1=an, 0=aus)
+- Fuer Zeitmessung ist die ausgegebene Gesamtzeit relevant (Zeitmessungen ohne Grafikausgabe!)
+
+nbody:
+- Fuer einen Leistungsvergleich ist die ausgegeben Zeit relevant
+- Zum spielen: ./nbody.exe -solar_system3 zur Simulation eines Alien-Einfalls (etwas Geduld)
+
+image:
+- Die Zeiten fuer die beiden Algorithmen (Laplace, Sobel) werden ausgegeben
+- zwei Ergebnisbilder werden bei angeschalteter grafischer Ausgabe zur Kontrolle auf dem Bildschirm ausgegeben

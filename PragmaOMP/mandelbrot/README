@@ -1,0 +1,19 @@
+Benutzen wie im Makefile angegeben den Intel C Compiler.
+Dazu muessen Sie vorher einmalig ausführen:
+    module load intel-compiler libFHBRS
+
+In Verzeichnis liegen folgende Dateien:
+
+1) mandelbrot.c
+Sourcecode. Hier sollten Sie ihre Änderungen einbauen.  Sie müssen
+hier auch noch anpassen, wie Sie die Anzahl der Threads beeinflussen
+wollen. Dazu muss dann evtl. auch der Aufruf des Programms in Makefile
+angepasst werden.
+
+2) Makefile
+Makefile zum Übersetzen und Starten des Programms
+- make      : übersetzt und linkt das Programm
+- make run  : führt das Programm mit grafischer Ausgabe aus (Testen)
+- make run2 : führt das Programm ohne grafische Ausgabe aus (Zeitmessungen)
+
+3) job.sh Für Zeitmessungen steht dieses Skript zur Verfuegung, dass das Programm ohne grafische Ausgabe startet.
