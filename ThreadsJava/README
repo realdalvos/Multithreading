@@ -1,0 +1,32 @@
+Denken Sie daran, dass fuer diese Aufgabe Oracle Java genommen werden soll:
+    module load java
+
+In TreeCalculation.java ist das zu modifizierende Programm enthalten.
+
+Suchen Sie insbesondere die Stellen mit:
+        // ???
+        // insert/modify here
+
+Sie dürfen aber auch an anderen Stellen etwas ergänzen (z.B. Instanzvariablen, Methoden, Klassen zusätzlich definieren).
+
+
+Im Makefile gibt es die Ziele:
+  default: uebersetzen
+  clean: Verzeichnis aufraeumen
+  run: kleines Beispielproblem berechnen
+
+In der ausgelieferten Version wird ein Fehler beim Ausführen gemeldet, da die Anzahl
+der erzeugten parallel Tasks (ohne ihre Aenderungen) noch falsch ist (siehe Aufgabenstellung).
+ERROR: ntasks 4 != 0
+
+Das Job-Skript job_tree.sh erzeugt einen Binärbaum der Hoehe 28 und traversiert diesen mit verschiedenen Threadzahlen und Task-Anzahl.
+
+Aus den Ergebnissen eines Joblaufs (also der resultierenden Job-out-Datei) laesst sich
+eine uebersichtliche Tabelle und Grafik zum Speedup erzeugen mit dem beigelegten python-Skript. 
+Aufruf (das < Zeichen hat darin eine Bedeutung!):
+
+    python speedup.py <Job-o-Datei
+
+Die resultierende Grafikdatei heißt dann "speedup.png", die tabellarischen Ergebnisse sind in "speedup.dat".
+Je nach ihrer Locale-Einstellung kann es notwendig sein, dass Sie in der Job-out-Datei mit einem Editor
+vor Aufruf des python-Skripts alle Dezimalkomma jeweils durch einen Dezimalpunkt ersetzen, was das python-Skript erwartet.
