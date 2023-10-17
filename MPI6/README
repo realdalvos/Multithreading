@@ -1,0 +1,12 @@
+Einmalig pro Session:
+         module load gcc openmpi/gnu libFHBRS
+
+Waehrend der Programmentwicklung macht es Sinn, dass Sie im Makefile einschalten, dass uebersetzt wird mit -DDEBUG (siehe derzeit auskommentierte Zeile mit CFLAGS). Dies schaltet einige Debug-Ausgaben ein, was bei der Fehlersuche sicherlich helfen kann. Fuer Programmlaeufe mit Zeitmessungen uebersetzen Sie ohne -DDEBUG, kommentieren diese Zeile also wieder aus.
+
+Uebersetzen mit:
+    make
+
+Kleiner Testlauf mit 2^6 Datenelementen im Feld:
+    make run
+
+Das Job-Skript startet das Programm mehrfach mit unterschiedlicher Prozessorzahl und 2^30 Datenelementen im Feld.
