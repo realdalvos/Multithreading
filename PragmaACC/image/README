@@ -1,0 +1,14 @@
+Einmal pro Session:
+       module load pgi libFHBRS
+
+Übersetzen: make
+Ausführen mit grafischer Ausgabe: make run
+Ausführen ohne grafische Ausgabe: make run2
+
+job.sh enthaelt einen Job-Skript für wr14.
+
+Wichtig: vor Ausführen des Programms muss der Laufzeitstack einmalig vergrößert werden:
+ulimit -s 128000
+
+
+Für Sie ist eigentlich nur die Datei edgedetect.c relevant.
